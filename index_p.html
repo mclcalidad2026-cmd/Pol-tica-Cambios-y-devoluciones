@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Política y Contacto - MCL 2026</title>
+    <style>
+        :root { 
+            --mcl-blue: #004b8d; 
+            --mcl-green: #a6ce39; 
+            --bg-light: #f4f7f9;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background: var(--bg-light);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* ENCABEZADO */
+        header { 
+            background: white; 
+            padding: 10px 15px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 4px solid var(--mcl-blue);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            height: 80px;
+            box-sizing: border-box;
+        }
+        
+        .logo-mcl img { height: 45px; width: auto; } 
+
+        .slogan { text-align: right; }
+        .slogan-year { font-size: 20px; font-weight: 900; color: var(--mcl-blue); line-height: 1; }
+        .slogan-text { font-weight: bold; color: var(--mcl-blue); font-size: 11px; }
+
+        /* BOTÓN FLOTANTE */
+        .btn-flotante {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: var(--mcl-green);
+            color: var(--mcl-blue);
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 14px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: pulse-green 2s infinite;
+            border: 2px solid white;
+            text-transform: uppercase;
+        }
+
+        @keyframes pulse-green {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(166, 206, 57, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(166, 206, 57, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(166, 206, 57, 0); }
+        }
+
+        .container { 
+            padding: 20px 15px; 
+            box-sizing: border-box; 
+            max-width: 1200px; 
+            margin: auto; 
+        }
+
+        /* VISOR PDF */
+        .pdf-wrapper {
+            width: 100%;
+            height: 70vh; 
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        iframe { width: 100%; height: 100%; border: none; }
+
+        .btn-fullscreen {
+            display: block;
+            background: var(--mcl-blue);
+            color: white;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        /* CONTACTOS */
+        .contact-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 40px auto;
+            max-width: 1200px;
+            padding: 25px 15px;
+            background: #eef2f5;
+            border-radius: 15px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 6px solid var(--mcl-green);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .contact-title {
+            font-size: 10px;
+            font-weight: bold;
+            color: #666;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .contact-name { font-weight: 800; color: var(--mcl-blue); font-size: 16px; margin-bottom: 10px; }
+        
+        .contact-actions { display: flex; gap: 15px; }
+
+        .btn-action {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.2s;
+        }
+
+        .btn-action:hover { transform: scale(1.1); }
+        .btn-action img { width: 100%; height: 100%; object-fit: contain; }
+
+        @media (min-width: 768px) {
+            .logo-mcl img { height: 60px; }
+            .btn-fullscreen { display: none; }
+            .pdf-wrapper { height: 850px; }
+        }
+    </style>
+</head>
+<body>
+
+<a href="#contacto-seccion" class="btn-flotante">
+    <img src="whatsapp.png" style="width: 20px;" alt=""> 
+    CONTÁCTANOS
+</a>
+
+<header>
+    <div class="logo-mcl">
+        <img src="MC LOGO.png" alt="Logo MCL"> 
+    </div>
+    <div class="slogan">
+        <div class="slogan-year">2026</div>
+        <div class="slogan-text">Integra • Optimiza • Crece</div>
+    </div>
+</header>
+
+<div class="container">
+    <h2 style="color: var(--mcl-blue); border-left: 5px solid var(--mcl-green); padding-left: 15px;">Política de Cambios y Devoluciones</h2>
+    
+    <a href="Politica de Cambios y Devoluciones_clientes.pdf" target="_blank" class="btn-fullscreen">Ver Documento Completo ↗</a>
+    
+    <div class="pdf-wrapper">
+        <iframe src="Politica de Cambios y Devoluciones_clientes.pdf"></iframe>
+    </div>
+</div>
+
+<aside class="contact-sidebar" id="contacto-seccion">
+    <h4 style="color: var(--mcl-blue); margin: 0 0 20px 0; font-size: 18px; text-align: center; font-weight: 900;">¿NECESITAS AYUDA? CONTACTA CON NUESTRO EQUIPO</h4>
+    
+    <div class="contact-grid">
+        <!-- Soporte -->
+        <div class="contact-card">
+            <span class="contact-title">Soporte Tecnico</span>
+            <div class="contact-name">Paola Orellana</div>
+            <div class="contact-actions">
+                <a href="https://wa.me/+50379157707" class="btn-action" title="WhatsApp">
+                    <img src="whatsapp.png" alt="WhatsApp">
+                </a>
+                <a href="tel:+50379157707" class="btn-action" title="Llamar">
+                    <img src="Telefono.png" alt="Llamar">
+                </a>
+            </div>
+        </div>
+
+        <!-- Ventas -->
+        <div class="contact-card">
+            <span class="contact-title">Ventas</span>
+            <div class="contact-name">Cristian Casco</div>
+            <div class="contact-actions">
+                <a href="https://wa.me/+50376961182" class="btn-action" title="WhatsApp">
+                    <img src="whatsapp.png" alt="WhatsApp">
+                </a>
+                <a href="tel:+50376961182" class="btn-action" title="Llamar">
+                    <img src="Telefono.png" alt="Llamar">
+                </a>
+            </div>
+        </div>
+
+        <!-- Calidad -->
+        <div class="contact-card">
+            <span class="contact-title">Gestión de Calidad</span>
+            <div class="contact-name">Carlos Burgos</div>
+            <div class="contact-actions">
+                <a href="https://wa.me/+50378730384" class="btn-action" title="WhatsApp">
+                    <img src="whatsapp.png" alt="WhatsApp">
+                </a>
+                <a href="tel:+50378730384" class="btn-action" title="Llamar">
+                    <img src="Telefono.png" alt="Llamar">
+                </a>
+            </div>
+        </div>
+    </div>
+</aside>
+
+</body>
+</html>
